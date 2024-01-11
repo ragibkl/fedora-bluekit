@@ -52,6 +52,7 @@ modules:
         - com.slack.Slack
         - rest.insomnia.Insomnia
       remove: []
+    user:
 
   - type: script
     scripts:

@@ -39,8 +39,8 @@ modules:
       - docker-buildx-plugin
       - docker-compose-plugin
     remove:
-      - gnome-terminal
       - gnome-terminal-nautilus
+      # - gnome-terminal
       # - firefox # default firefox removed in favor of flatpak
       # - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
 

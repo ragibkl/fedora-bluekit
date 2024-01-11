@@ -29,8 +29,8 @@ modules:
       - code
       # - google-chrome-stable
       - libreoffice
-      # - nextcloud-client
-      # - nextcloud-client-nautilus
+      - nextcloud-client
+      - nextcloud-client-nautilus
       - tilix
       - tilix-nautilus
       - docker-ce

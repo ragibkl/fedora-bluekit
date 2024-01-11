@@ -28,7 +28,7 @@ modules:
     install:
       - code
       # - google-chrome-stable
-      # - libreoffice
+      - libreoffice
       # - nextcloud-client
       # - nextcloud-client-nautilus
       - tilix

@@ -20,6 +20,7 @@ modules:
                   # should be added into /usr/etc/ as that is the proper "distro"
                   # config directory on ostree. Read more in the files module's README
       - yum.repos.d: /etc/yum.repos.d
+      - yum.repos.d: /usr/etc/yum.repos.d
 
   - type: rpm-ostree
     repos:

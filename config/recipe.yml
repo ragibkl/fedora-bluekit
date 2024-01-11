@@ -50,7 +50,6 @@ modules:
     notify: true
     system:
       install:
-        - com.google.Chrome
         - com.slack.Slack
         - rest.insomnia.Insomnia
       remove: []

@@ -27,7 +27,6 @@ modules:
       - https://download.docker.com/linux/fedora/docker-ce.repo
     install:
       - code
-      - google-chrome-stable
       - libreoffice
       - nextcloud-client
       - nextcloud-client-nautilus
@@ -38,19 +37,19 @@ modules:
       - containerd.io
       - docker-buildx-plugin
       - docker-compose-plugin
-    optfix:
-      - google-chrome-stable
     remove:
       - gnome-terminal
       - gnome-terminal-nautilus
-      # - firefox # default firefox removed in favor of flatpak
-      # - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
+      - firefox # default firefox removed in favor of flatpak
+      - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
 
   - type: default-flatpaks
     notify: true
     system:
       install:
+        - com.google.Chrome
         - com.slack.Slack
+        - org.mozilla.firefox
         - rest.insomnia.Insomnia
       remove: []
     user:

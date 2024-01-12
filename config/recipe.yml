@@ -30,6 +30,7 @@ modules:
       - libreoffice
       - nextcloud-client
       - nextcloud-client-nautilus
+      - pgadmin4
       - tilix
       - tilix-nautilus
       - docker-ce
@@ -48,10 +49,12 @@ modules:
     system:
       install:
         - com.google.Chrome
+        - com.mattjakeman.ExtensionManager
         - com.slack.Slack
         - org.mozilla.firefox
         - rest.insomnia.Insomnia
-      remove: []
+      remove:
+        - org.gnome.Extensions
     user:
 
   - type: script

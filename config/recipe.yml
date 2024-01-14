@@ -44,6 +44,8 @@ modules:
       - docker-buildx-plugin
       - docker-compose-plugin
 
+      # Deps for headsetcontrol
+      - hidapi
       # Build deps for headsetcontrol
       # - cmake
       # - hidapi-devel

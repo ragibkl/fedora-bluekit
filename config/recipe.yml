@@ -45,9 +45,9 @@ modules:
       - docker-compose-plugin
 
       # Build deps for headsetcontrol
-      - cmake
-      - hidapi-devel
-      - g++
+      # - cmake
+      # - hidapi-devel
+      # - g++
     remove:
       - gnome-terminal
       - gnome-terminal-nautilus
@@ -75,4 +75,4 @@ modules:
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh
       # builds and install headsetcontrol
-      - headsetcontrol.sh
+      # - headsetcontrol.sh

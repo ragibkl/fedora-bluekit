@@ -62,5 +62,5 @@ RUN chmod +x /tmp/build.sh && /tmp/build.sh && \
 
 # Installs headsetcontrol
 RUN rpm-ostree install hidapi
-COPY --from=headsetcontrol /tmp/HeadsetControl/build/headsetcontrol /bin/headsetcontrol
+COPY --from=headsetcontrol /tmp/HeadsetControl/build/headsetcontrol /usr/bin/headsetcontrol
 COPY --from=headsetcontrol /tmp/HeadsetControl/build/70-headsets.rules /lib/udev/rules.d/70-headsets.rules

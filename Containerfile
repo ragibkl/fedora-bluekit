@@ -12,6 +12,8 @@
 ARG IMAGE_MAJOR_VERSION=39
 ARG BASE_IMAGE_URL=ghcr.io/ublue-os/silverblue-main
 
+
+# Builds headsetcontrol in a fedora based container
 FROM fedora:${IMAGE_MAJOR_VERSION} as headsetcontrol
 WORKDIR /tmp
 RUN dnf group install -y "Development tools"
@@ -23,8 +25,6 @@ RUN git clone https://github.com/Sapd/HeadsetControl && \
     cmake .. && \
     make
 
-# echo 'Installing HeadsetControl'
-# make install
 
 FROM ${BASE_IMAGE_URL}:${IMAGE_MAJOR_VERSION}
 
@@ -60,5 +60,7 @@ COPY --from=docker.io/mikefarah/yq /usr/bin/yq /usr/bin/yq
 RUN chmod +x /tmp/build.sh && /tmp/build.sh && \
     rm -rf /tmp/* /var/* && ostree container commit
 
+# Installs headsetcontrol
+RUN rpm-ostree install hidapi
 COPY --from=headsetcontrol /tmp/HeadsetControl/build/headsetcontrol /bin/headsetcontrol
 COPY --from=headsetcontrol /tmp/HeadsetControl/build/70-headsets.rules /lib/udev/rules.d/70-headsets.rules

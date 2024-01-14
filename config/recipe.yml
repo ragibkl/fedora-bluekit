@@ -29,11 +29,14 @@ modules:
     repos:
       - https://download.docker.com/linux/fedora/docker-ce.repo
     install:
+      # GUI apps on host for better integration
       - code
       - libreoffice
       - nextcloud-client
       - nextcloud-client-nautilus
       - pgadmin4
+
+      # Tilix as default terminal
       - tilix
       - tilix-nautilus
 
@@ -43,14 +46,8 @@ modules:
       - containerd.io
       - docker-buildx-plugin
       - docker-compose-plugin
-
-      # Deps for headsetcontrol
-      - hidapi
-      # Build deps for headsetcontrol
-      # - cmake
-      # - hidapi-devel
-      # - g++
     remove:
+      # removing default gnome-terminal in favour of tilix
       - gnome-terminal
       - gnome-terminal-nautilus
 
@@ -76,5 +73,3 @@ modules:
     scripts:
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh
-      # builds and install headsetcontrol
-      # - headsetcontrol.sh

@@ -53,8 +53,8 @@ modules:
 
       # default firefox removed in favor of flatpak
       # langpacks needs to also be removed to prevent dependency problems
-      - firefox
-      - firefox-langpacks
+      # - firefox
+      # - firefox-langpacks
 
   - type: default-flatpaks
     notify: true
@@ -63,10 +63,10 @@ modules:
         - com.google.Chrome
         - com.mattjakeman.ExtensionManager
         - com.slack.Slack
-        - org.mozilla.firefox
         - rest.insomnia.Insomnia
       remove:
         - org.gnome.Extensions
+        - org.mozilla.firefox
     user:
 
   - type: script

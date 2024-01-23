@@ -31,7 +31,7 @@ modules:
     install:
       # GUI apps on host for better integration
       - code
-      - libreoffice
+      # - libreoffice
       - nextcloud-client
       - nextcloud-client-nautilus
       - pgadmin4
@@ -63,6 +63,7 @@ modules:
         - com.google.Chrome
         - com.mattjakeman.ExtensionManager
         - com.slack.Slack
+        - org.libreoffice.LibreOffice
         - rest.insomnia.Insomnia
       remove:
         - org.gnome.Extensions

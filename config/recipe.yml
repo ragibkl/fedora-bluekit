@@ -30,6 +30,7 @@ modules:
       - https://download.docker.com/linux/fedora/docker-ce.repo
     install:
       # Some GUI apps on host for better integration
+      - code
       - nextcloud-client
       - nextcloud-client-nautilus
       - pgadmin4
@@ -60,7 +61,6 @@ modules:
         - com.google.Chrome
         - com.mattjakeman.ExtensionManager
         - com.slack.Slack
-        - com.visualstudio.code
         - org.gnome.Evince
         - org.gnome.Loupe
         - org.gnome.Snapshot
@@ -69,6 +69,7 @@ modules:
         - org.mozilla.firefox
         - rest.insomnia.Insomnia
       remove:
+        - com.visualstudio.code
         - org.gnome.Extensions
 
   - type: script

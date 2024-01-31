@@ -30,7 +30,6 @@ modules:
       - https://download.docker.com/linux/fedora/docker-ce.repo
     install:
       # Some GUI apps on host for better integration
-      - code
       - nextcloud-client
       - nextcloud-client-nautilus
       - pgadmin4
@@ -50,6 +49,10 @@ modules:
       - gnome-terminal
       - gnome-terminal-nautilus
 
+      # default firefox removed in favor of flatpak
+      - firefox
+      - firefox-langpacks
+
   - type: default-flatpaks
     notify: true
     system:
@@ -57,11 +60,16 @@ modules:
         - com.google.Chrome
         - com.mattjakeman.ExtensionManager
         - com.slack.Slack
+        - com.visualstudio.code
+        - org.gnome.Evince
+        - org.gnome.Loupe
+        - org.gnome.Snapshot
+        - org.gnome.Totem
         - org.libreoffice.LibreOffice
+        - org.mozilla.firefox
         - rest.insomnia.Insomnia
       remove:
         - org.gnome.Extensions
-        - org.mozilla.firefox
 
   - type: script
     scripts:

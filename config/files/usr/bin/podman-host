@@ -11,4 +11,4 @@ for i in "${!arr[@]}"; do
     fi
 done
 
-podman "${arr[@]}"
+flatpak-spawn --host podman "${arr[@]}"

@@ -46,8 +46,9 @@ modules:
       - docker-buildx-plugin
       - docker-compose-plugin
 
-      # HP Printer drivers
+      # HP printer and scanner drivers
       - hplip
+      - sane-backends-drivers-scanners
     remove:
       # removing default gnome-terminal in favour of tilix
       - gnome-terminal

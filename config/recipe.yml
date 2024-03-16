@@ -49,6 +49,7 @@ modules:
       # HP printer and scanner drivers
       - hplip
       - sane-backends-drivers-scanners
+      - simple-scan
     remove:
       # removing default gnome-terminal in favour of tilix
       - gnome-terminal

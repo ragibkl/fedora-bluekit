@@ -45,6 +45,9 @@ modules:
       - containerd.io
       - docker-buildx-plugin
       - docker-compose-plugin
+
+      # HP Printer drivers
+      - hplip
     remove:
       # removing default gnome-terminal in favour of tilix
       - gnome-terminal

@@ -69,13 +69,13 @@ modules:
         - org.gnome.Evince
         - org.gnome.Loupe
         - org.gnome.Snapshot
-        - org.gnome.Totem
         - org.libreoffice.LibreOffice
         - org.mozilla.firefox
         - rest.insomnia.Insomnia
       remove:
         - com.visualstudio.code
         - org.gnome.Extensions
+        - org.gnome.Totem
 
   - type: script
     scripts:

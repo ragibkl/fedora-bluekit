@@ -65,7 +65,7 @@ RUN rpm-ostree install hidapi
 COPY --from=headsetcontrol /tmp/HeadsetControl/build/headsetcontrol /usr/bin/headsetcontrol
 COPY --from=headsetcontrol /tmp/HeadsetControl/build/70-headsets.rules /lib/udev/rules.d/70-headsets.rules
 
-# Installs webex client
-RUN wget https://binaries.webex.com/WebexDesktop-CentOS-Official-Package/Webex.rpm
-RUN rpm-ostree install Webex.rpm
-RUN rm Webex.rpm
+# # Installs webex client
+# RUN wget https://binaries.webex.com/WebexDesktop-CentOS-Official-Package/Webex.rpm
+# RUN rpm-ostree install Webex.rpm
+# RUN rm Webex.rpm

@@ -30,6 +30,7 @@ modules:
       - https://download.docker.com/linux/fedora/docker-ce.repo
     install:
       # Some GUI apps on host for better integration
+      - gnome-clocks
       - nextcloud-client
       - nextcloud-client-nautilus
       - pgadmin4
